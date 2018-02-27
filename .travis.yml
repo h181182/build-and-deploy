@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
-script: 
-  - npm run lint
-  - npm test
-  - npm run build
+script:
+- npm run lint
+- npm test
+- npm run build
+deploy:
+provider: heroku
+app: deadmaggi-build-and-deply
+skip_cleanup: true
+  api_key:
+    secure: p1nmSo27J1yXbuG1aKdzIjpZxjYfrg7B8I+U/C72BbtJT39N06JA+RrrxO35X1ETM4VPQH2v8zEOAiLVMuSgK2UhAMEzllSAButmuAlMwuO3tHI45Odx8pDSB4nY+6US52unoOWJzm64yo/TwhZnawYi0JV1kIeJqG5F5jhNj34nXhkVmyrVrOtMDlpCEW/YGxqcWFhLFwC8S/qam5Qdi92Z5BkKhcBMtjqJYLl9bWjRSmMa4cLq4+GGvZXzhFPsmYMshyEgZjsnExbxmfwOx6hvjJsf4u+p1HTt4D6eaqqj7eNnzSX6MnZvmtSgaLYkcKivG/aY6txoJuS9/IvV2sOHrPXYYgSSyBTS/DfADx50LsYYSdorlqhX5mfvH7mlAmZQE8J8NuSqKG+Z+LywL9drVR9vocUhQDKi8zNGj+mrAluZ8M6tLUV01pXwnHQfwFNio/qDA2Z31MpTkb5dWBBymqJ2yeVec1xuvLqa56H8snZhXfzrd1liQbFeSXnV1QWwUeKRvKGG7LKAgKcv7Nq8t4dWA1gOp52VBWRTtcttzohlPXe1y3bWsQizAqZmSo1sqBWzQc4INGD3zfV6/6mc3vHfZ2LWFIFt2pDqTtyEsiMbIJN8/oltQiEBAgEFyEEB859CBEGAflCkEVVvcliFzA5JP4U9tM0+EYPI8GI=
